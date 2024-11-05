@@ -8,20 +8,27 @@ class Lamp:
         self.model = model
         self.price = price
 
+    @property
     def get_types(self):
         return self.__types
 
+    @property
     def get_power(self):
         return self.__power
 
+    @property
     def get_diode(self):
         return self.__diode
 
+    @property
     def get_producer(self):
         return self.__producer
 
     def __str__(self):
-        return f"Тип: {self.__types} \nПотужність: {self.__power} \nКількість діодів: {self.__diode} \nВиробник: {self.__producer}"
+        return f"Тип: {self.__types} 
+        \nПотужність: {self.__power} 
+        \nКількість діодів: {self.__diode} 
+        \nВиробник: {self.__producer}"
 
     def __repr__(self):
         return (f'Тип: {self.__types} '
@@ -43,4 +50,6 @@ def main():
     lamp3 = Lamp()
     print('Lamp1:\n',repr(lamp1))
     print('Lamp3:\n', repr(lamp3))
-main()
+
+if __name__ == '__main__':
+    main()
